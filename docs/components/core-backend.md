@@ -43,7 +43,7 @@ A cron-driven Laravel scheduler (`php artisan schedule:run`, run every minute) d
 ## External integrations
 
 - **Stripe** — supporter donations/subscriptions (checkout sessions, billing portal, signature-verified webhook at `POST /api/support/webhook`).
-- **Anthropic API** — powers a supporter-only AI assistant (pinned to a Haiku-class model).
+- **Anthropic API** — powers a supporter-only AI assistant (pinned to a Haiku-class model). See [`ai-assistant.md`](ai-assistant.md) for the full implementation.
 - **Google OAuth** (Socialite) — social login, callback at `/api/auth/google/callback`.
 - **Mailjet** — transactional email (SMTP relay).
 - **Google Analytics 4** — frontend analytics.

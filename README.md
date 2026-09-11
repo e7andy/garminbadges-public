@@ -29,6 +29,7 @@ This decouples "getting data out of Garmin" (four independent, replaceable imple
 
 - [`docs/architecture.md`](docs/architecture.md) — system diagram, sync flow, API surface, data model
 - [`docs/components/core-backend.md`](docs/components/core-backend.md) — the Laravel/Angular core app
+- [`docs/components/ai-assistant.md`](docs/components/ai-assistant.md) — the supporter-only AI features (Q&A chat, recaps) and admin knowledge base
 - [`docs/components/updater-extension.md`](docs/components/updater-extension.md) — the Chrome extension
 - [`docs/components/android-app.md`](docs/components/android-app.md) — the Android sync app
 - [`docs/components/watch-app.md`](docs/components/watch-app.md) — the Connect IQ watch app
