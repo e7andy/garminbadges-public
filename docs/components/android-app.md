@@ -2,6 +2,8 @@
 
 Repository: [`e7andy/garminbadges-android`](https://github.com/e7andy/garminbadges-android)
 
+> **Highlight**: this isn't a webview wrapper. It implements Garmin's SSO login flow end-to-end — including MFA — and the OAuth2 token exchange, natively in Java.
+
 ## Purpose
 
 A native Android client that syncs earned badges, repeatable-badge history, active/virtual challenges, and available-badge progress from a user's Garmin Connect account to [garminbadges.com](https://garminbadges.com) — the Android equivalent of the [`garminbadges-updater`](updater-extension.md) Chrome extension, but without needing a browser. The repo's own docs describe it as a Java port of that extension's sync logic, explicitly maintained to stay in sync with it when Garmin's API behavior changes.

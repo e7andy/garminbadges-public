@@ -83,7 +83,7 @@ The core repo's CI also reaches out to the `garminbadges-updater` repo's GitHub 
 ## External integrations (core backend only)
 
 - **Stripe** — supporter subscriptions/donations, checkout + billing portal + webhook.
-- **Anthropic API** — powers a supporter-only AI badge assistant.
+- **Anthropic API** — powers a supporter-only AI badge assistant. See [`components/ai-assistant.md`](components/ai-assistant.md) for how retrieval, context-building, and the admin knowledge base work.
 - **Google OAuth** (Socialite) — social login.
 - **Mailjet** — transactional email.
 - **Google Analytics 4** — frontend analytics.
