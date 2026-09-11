@@ -2,6 +2,8 @@
 
 > Source repository is **private**. This page documents its architecture without reproducing source code.
 
+> **Highlight**: deliberately stays out of the Garmin-scraping business entirely — it's the one piece of the ecosystem that never talks to Garmin, which keeps the fragile, most-likely-to-break integration work isolated to swappable clients instead of the system of record.
+
 ## Purpose
 
 The core of [garminbadges.com](https://garminbadges.com) ("Garmin Badge Database"). A community site where users track earned and in-progress Garmin Connect badges, follow challenge progress, browse a badge catalogue, see leaderboards and year-in-review analytics, follow other users, read a blog, and — for paying supporters — use an AI badge assistant.

@@ -4,6 +4,16 @@ Public documentation of the architecture and ecosystem of **[GarminBadges](https
 
 The core application source is private. This repo exists to document the system publicly: how the pieces fit together, what each component does, and how data flows between them.
 
+## Highlights
+
+A few things about this system worth a second look:
+
+- **No official Garmin API, so there isn't one client — there are four.** Garmin doesn't expose badge/challenge data publicly. Rather than one fragile scraper, the ecosystem has four independent implementations (a Chrome extension, a native Android app, and two Python scripts) that each authenticate to Garmin their own way and push into one shared upload contract. Any one of them can break, get fixed, or get replaced without touching the others.
+- **A real native Garmin login on Android, not a webview.** [`garminbadges-android`](docs/components/android-app.md) performs Garmin's SSO flow — including MFA — and the OAuth2 token exchange itself, then talks to Garmin's internal API directly. No embedded browser, no cookie-jar hand-off.
+- **A watch app that respects its constraints.** The [Connect IQ app](docs/components/watch-app.md) (Monkey C) ships both a full app and a lightweight glance view, and explicitly drops support for older Instinct models that can't fit it in memory — a small but real embedded-device tradeoff, made deliberately rather than discovered by crash reports.
+- **RAG without a vector database.** The [AI assistant](docs/components/ai-assistant.md) retrieves relevant badges and admin notes with plain keyword matching instead of standing up embeddings/vector search — a deliberate call that the badge catalogue is small and structured enough not to need it.
+- **One backend that stays out of the scraping business.** The [core app](docs/components/core-backend.md) never talks to Garmin itself — it only owns storage and presentation behind a single sync contract, so the messy, fragile "reverse-engineer Garmin's API" problem lives entirely in swappable clients instead of the system of record.
+
 ## The ecosystem at a glance
 
 GarminBadges is not a single app — it's one central backend plus several independent **ingestion clients** that each know how to talk to Garmin Connect and push data into it.

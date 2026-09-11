@@ -2,6 +2,8 @@
 
 Repository: [`e7andy/garminbadges-updater`](https://github.com/e7andy/garminbadges-updater)
 
+> **Highlight**: no login screen of its own — it rides on the user's already-authenticated Garmin Connect tab, so there's no credential handling in the extension at all.
+
 ## Purpose
 
 A Chrome extension that syncs a user's badge and challenge data from Garmin Connect to [garminbadges.com](https://garminbadges.com). This is one of the ecosystem's ingestion clients — the mechanism by which a user's real Garmin activity/achievement data enters the GarminBadges platform.

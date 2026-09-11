@@ -2,6 +2,8 @@
 
 > Part of the private `garminbadges` core repo — documented separately because it's a distinct subsystem, not because it's a separate deployable. See [`core-backend.md`](core-backend.md) for the app it lives inside.
 
+> **Highlight**: retrieval-augmented generation without a vector database — plain keyword matching against a catalogue small and structured enough not to need one.
+
 ## Purpose
 
 A supporter-only feature set built on the Anthropic API, covering three capabilities:

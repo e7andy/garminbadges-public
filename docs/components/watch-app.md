@@ -2,6 +2,8 @@
 
 Repository: [`e7andy/garminbadges-watch`](https://github.com/e7andy/garminbadges-watch)
 
+> **Highlight**: ships a full app *and* a lightweight glance view, and explicitly drops support for older Instinct models that can't fit it in memory — a deliberate embedded-constraints tradeoff, not one found the hard way in a crash report.
+
 ## Purpose
 
 "Badge Tracker" — a Garmin Connect IQ watch app that surfaces a user's [garminbadges.com](https://garminbadges.com) stats directly on their watch: upcoming badges (next 7 days), challenges ending soon, and in-progress challenges ranked by how far behind schedule they are. Unlike every other component in the ecosystem, this app is **read-only** — it never syncs data, it only displays data that one of the other clients has already pushed to the backend. Data is fetched live and cached on-device for instant display on launch, with a "View Online" option linking out to garminbadges.com in the phone's browser.
